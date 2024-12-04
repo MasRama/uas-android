@@ -59,6 +59,9 @@ const SearchScreen: React.FC = () => {
           renderItem={({ item }) => <AnimeCard anime={item} />}
           keyExtractor={(item) => item.mal_id.toString()}
           contentContainerStyle={styles.list}
+          showsVerticalScrollIndicator={false}
+          scrollEnabled={true}
+          ListFooterComponent={<View style={{ height: 80 }} />}
           ListEmptyComponent={() => (
             <View style={styles.emptyContainer}>
               <Text style={styles.emptyText}>
@@ -84,6 +87,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     padding: 16,
     gap: 8,
+    zIndex: 1
   },
   searchInput: {
     flex: 1,
@@ -101,6 +105,7 @@ const styles = StyleSheet.create({
   },
   list: {
     padding: 8,
+    flexGrow: 1
   },
   emptyContainer: {
     flex: 1,

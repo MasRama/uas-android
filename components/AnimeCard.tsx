@@ -16,9 +16,6 @@ export const AnimeCard: React.FC<AnimeCardProps> = ({ anime }) => {
         style={styles.image}
       />
       <View style={styles.infoContainer}>
-        <Text style={styles.title} numberOfLines={2}>
-          {anime.title}
-        </Text>
         <View style={styles.statsContainer}>
           <View style={styles.stat}>
             <Text style={styles.statLabel}>Score</Text>
@@ -52,26 +49,26 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
     elevation: 5,
     backgroundColor: '#1a1a1a',
-    height: 220,
+    height: 240,
   },
   image: {
     width: '100%',
-    height: '55%',
+    height: '50%',
   },
   infoContainer: {
     padding: 12,
-    height: '45%',
+    height: '50%',
   },
   title: {
     fontSize: 16,
     fontWeight: 'bold',
     color: '#fff',
-    marginBottom: 8,
+    marginBottom: 4,
   },
   statsContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 8,
+    marginBottom: 4,
   },
   stat: {
     alignItems: 'center',
@@ -88,11 +85,12 @@ const styles = StyleSheet.create({
   detailButton: {
     backgroundColor: '#6200ee',
     borderRadius: 8,
-    padding: 8,
+    padding: 10,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     gap: 8,
+    marginTop: 4
   },
   buttonText: {
     color: '#fff',

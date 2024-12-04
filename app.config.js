@@ -1,5 +1,8 @@
 export default {
     expo: {
-        name: "Ramanime"
+        name: "Ramanime",
+        android: {
+         package: "com.anonymous.ramanime"
+        }
     }
 };
